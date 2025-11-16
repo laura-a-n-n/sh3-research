@@ -1,0 +1,11 @@
+Silent Hill 3 v1.02 (NTSC-U)
+----------------------------
+
+⭐️ game info ⭐️
+Volume label and serial: SILENT_HILL_3 SLUS-20622
+Size: 3,584,229,376 bytes
+ISO SHA1: 0f7b0d5d75fe34ddf72e26aae1b4f5e7891282b0
+SLUS_206.22 SHA1: dbb94538294b21be38035c0ce6b78354bdfdf2a7
+
+⭐️ addresses ⭐️
+00592000 - chhaa.mdl offset
