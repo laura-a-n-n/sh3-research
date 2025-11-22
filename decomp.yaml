@@ -1,0 +1,27 @@
+name: Silent Hill 3 (USA)
+sha1: dbb94538294b21be38035c0ce6b78354bdfdf2a7
+options:
+  basename: SLUS_206.22
+  target_path: SLUS_206.22
+  base_path: .
+  compiler: MWCCPS2
+  find_file_boundaries: False
+  platform: ps2
+  asm_path: asm/
+  rodata_string_guesser_level: 0
+  symbol_addrs_path: symbol_addrs.txt
+segments:
+  - [0, databin, elf_header]
+  - name: main
+    type: code
+    start: 0x580
+    vram: 0x00100000
+    bss_size: 0x1BA4B00
+    subsegments:
+      - [0x000580, asm, text]
+      - [0x238080, textbin, vutext]
+      - [0x249A00, data, data]
+      - [0x2C8F00, rodata, ovl_groups]
+      - [0x2C8F80, lit4, lit4]
+      - { vram: 0x3C8B00, type: bss, name: bss }
+  - [0x002C9848]
