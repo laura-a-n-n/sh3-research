@@ -1,6 +1,7 @@
 typedef unsigned char u8;
 typedef signed char s8;
 typedef int s32;
+typedef unsigned int u32;
 
 // 0x00153830 - fills chhaa.mdl region with 0x12
 int func_00153830(void *mdlHeader, int size)
@@ -27,6 +28,7 @@ void func_011fd28(int* arg0, int arg1) {
 extern u8 D_00398310[256];
 extern s8 D_01F605B0[256];
 void func_002A86E0(u8* input, s32 index);
+
 
 // 0x002A8560 - costume code checker
 s32 func_002A8560() {
@@ -59,3 +61,14 @@ s32 func_002A8560() {
         }
     }
 }
+
+extern s32 D_01D880AC[256];
+// func_00199B00 - unlocks an outfit?
+void func_00199B00(s32 arg0) {
+    D_01D880AC[arg0 >> 5] |= 1 << (arg0 & 0x1F);
+}
+// checks if outfit unlocked
+s32 func_00199B30(s32 arg0) {
+    return (D_01D880AC[arg0 >> 5] >> (arg0 & 0x1F)) & 1;
+}
+

@@ -11,3 +11,5 @@ SLUS_206.22 SHA1: dbb94538294b21be38035c0ce6b78354bdfdf2a7
 00592000 - chhaa.mdl offset
 00592060 - chhaa.mdl model header offset
 00593320 - chhaa.mdl skeleton data offset
+01F605B0 - costume code input
+00398310 - hashed array of costume codes
