@@ -1,7 +1,4 @@
-typedef unsigned char u8;
-typedef signed char s8;
-typedef int s32;
-typedef unsigned int u32;
+#include "ctx.c"
 
 // 0x00153830 - fills chhaa.mdl region with 0x12
 int func_00153830(void *mdlHeader, int size)
@@ -72,3 +69,28 @@ s32 func_00199B30(s32 arg0) {
     return (D_01D880AC[arg0 >> 5] >> (arg0 & 0x1F)) & 1;
 }
 
+// 0x001D2E80 - char* Model3SkeletonStructure(void* model)
+s8* func_001D2E80(sh_Model* model) {
+    s8* structure;
+    s32 i;
+    u32 mask;
+
+    structure = (s8*)((u8*)model + model->skeleton_structure_offset);
+
+    if (!(model->flag & 1)) {
+        for (i = 0; i < (u32) model->n_skeletons; i++) {
+            u8 d = structure[i];
+
+            mask = d;
+            if ((s32) mask < 0xFE) {
+                mask >>= 1;
+                mask &= 0xff;
+            }
+
+            structure[i] = mask;
+        }
+        model->flag |= 1;
+    }
+
+    return structure;
+}
