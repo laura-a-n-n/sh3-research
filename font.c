@@ -159,7 +159,7 @@ void fontSet(unsigned short code, unsigned short x, unsigned short y)
     	WFONT_STREAM_DATA* fstream;
 
         if (font.w_st_num >= font.w_stream_max) {
-            // printf("wfont over.\n");
+            debugPrintf("wfont over.\n");
             return;
         }
         
@@ -179,7 +179,7 @@ void fontSet(unsigned short code, unsigned short x, unsigned short y)
     } else {
 	    FONT_STREAM_DATA* fstream;
         if (font.st_num >= font.stream_max) {
-            // printf("font over.\n");
+            debugPrintf("font over.\n");
             return;
         }
         num = func_00158150(code);
@@ -203,7 +203,7 @@ void fontSetLine(s32 x, s32 w, s32 y) {
 	FONT_STREAM_DATA* fstream;
 
     if (font.st_num >= font.stream_max) {
-        // printf("font over.\n");
+        debugPrintf("font over.\n");
         return;
     }
 
@@ -405,7 +405,7 @@ u16* fontGetMesAdr(u16* str, u16 num) {
         return NULL;
     }
     if (num >= *str) {
-        // printf("message number over! (%d/%d)\n", num, *str);
+        debugPrintf("message number over! (%d/%d)\n", num, *str);
         return NULL;
     }
     return str + str[num + 1];

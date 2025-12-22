@@ -20,6 +20,8 @@ if (_cond) {\
 } else {\
     fjAssert_(_file, _line, #_cond);\
 }
+#define debugPrintf(...) printf(__VA_ARGS__)
 #else
 #define fjAssert(_cond, _file, _line)
+#define debugPrintf(...)
 #endif
