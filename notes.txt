@@ -43,7 +43,7 @@ clGetHitSectListMOVEOutDoor => 001a5bb0
 clSetOneBattleResult => 001a35a0
 
 fontBarBlink => 0015aac0
-fontClear => 001fbe60
+fontClear => 00158010
 fontFlush => 0015ab30
 fontFlushNoSPR => 0015b830
 fontGetMesAdr => 0015d150
