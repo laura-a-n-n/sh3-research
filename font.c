@@ -2,150 +2,147 @@
 
 struct FONT_DATA {
     // total size: 0x215B0
-    /* 0x00000 */ unsigned int tex_head[12]; // size 0x30
-    /* 0x00030 */ unsigned int clut_head[12]; // size 0x30
-    /* 0x00060 */ unsigned int clut[8]; // size 0x20
-    /* 0x00080 */ unsigned char texbuf[131072]; // size 0x20000
-    /* 0x20080 */ unsigned long tex0; // size 0x4
-    /* 0x20088 */ signed int fonttype; // size 0x4
-    /* 0x2008C */ unsigned int rgb_u; // size 0x4
-    /* 0x20090 */ unsigned int rgb_d; // size 0x4
-    /* 0x20094 */ unsigned int rgb_s[4]; // size 0x10
-    /* 0x200A4 */ unsigned int alpha; // size 0x4
-    /* 0x200A8 */ unsigned int alpha_base; // size 0x4
-    /* 0x200AC */ unsigned int flag; // size 0x4
-    /* 0x200B0 */ unsigned short x; // size 0x2
-    /* 0x200B2 */ unsigned short y; // size 0x2
-    /* 0x200B4 */ unsigned short wide_w; // size 0x2
-    /* 0x200B6 */ unsigned short wide_h; // size 0x2
-    /* 0x200B8 */ unsigned short right_x; // size 0x2
-    /* 0x200BA */ unsigned short right_y; // size 0x2
-    /* 0x200BC */ unsigned short wm; // size 0x2
-    /* 0x200BE */ unsigned short hm; // size 0x2
-                  signed short unk20C0;
-    /* 0x200C0 */ signed short wait_count; // size 0x2
-    /* 0x200C2 */ signed short wait_type; // size 0x2
-    /* 0x200C4 */ signed short page_sound; // size 0x2
-    /* 0x200C6 */ unsigned short code[400]; // size 0x320
-    /* 0x203E6 */ signed short upper[400]; // size 0x320
-    /* 0x20706 */ signed short lower[400]; // size 0x320
-    /* 0x20A26 */ signed short top; // size 0x2
-    /* 0x20A28 */ signed short bottom; // size 0x2
-    /* 0x20A2A */ signed short st_num; // size 0x2
-    /* 0x20A2C */ signed short w_st_num; // size 0x2
-    /* 0x20A2E */ signed short prl_count; // size 0x2
-    /* 0x20A30 */ signed short preload; // size 0x2
-    /* 0x20A32 */ signed short shadow_max; // size 0x2
-    /* 0x20A34 */ signed short shadow_now; // size 0x2
-    /* 0x20A36 */ unsigned short sel_xl; // size 0x2
-    /* 0x20A38 */ unsigned short sel_xr; // size 0x2
-    /* 0x20A3A */ unsigned short sel_yu[4]; // size 0x8
-    /* 0x20A42 */ unsigned short sel_yd[4]; // size 0x8
-    /* 0x20A4A */ signed short sel_max; // size 0x2
-    /* 0x20A4C */ signed short sel_now; // size 0x2
-    /* 0x20A4E */ unsigned short mes_v[10][64]; // size 0x500
-                  unsigned short * unk20F50;
-    /* 0x20F50 */ unsigned short * mes_str_now; // size 0x4
-    /* 0x20F54 */ unsigned short * mes_str; // size 0x4
-    /* 0x20F58 */ unsigned short * prl_str; // size 0x4
-    /* 0x20F5C */ struct FONT_STREAM_DATA * stream; // size 0x4
-    /* 0x20F60 */ struct WFONT_STREAM_DATA * w_stream; // size 0x4
-    /* 0x20F64 */ struct MFONT_STREAM_DATA * m_stream; // size 0x4
-    /* 0x20F68 */ unsigned short stream_max; // size 0x2
-    /* 0x20F6A */ unsigned short w_stream_max; // size 0x2
-    /* 0x20F6C */ unsigned short m_stream_max; // size 0x2
-    /* 0x20F6E */ unsigned short m_code[256]; // size 0x200
-    /* 0x2116E */ signed short m_upper[256]; // size 0x200
-    /* 0x2136E */ signed short m_lower[256]; // size 0x200
-    /* 0x2156E */ signed short m_top; // size 0x2
-    /* 0x21570 */ signed short m_bottom; // size 0x2
-    /* 0x21572 */ signed short m_st_num; // size 0x2
-    /* 0x21574 */ signed int m_base_x; // size 0x4
-    /* 0x21578 */ signed int m_base_y; // size 0x4
-    /* 0x2157C */ signed int m_base_z; // size 0x4
-    /* 0x21580 */ unsigned int m_rgba; // size 0x4
-    /* 0x21584 */ signed int m_sx; // size 0x4
-    /* 0x21588 */ signed int m_sy; // size 0x4
-    /* 0x2158C */ signed int m_w; // size 0x4
-    /* 0x21590 */ signed int m_h; // size 0x4
-    /* 0x21594 */ signed int m_x; // size 0x4
-    /* 0x21598 */ signed int m_y; // size 0x4
-    /* 0x2159C */ float bar_blink; // size 0x4
-    /* 0x215A0 */ unsigned long * pCur; // size 0x4
-    /* 0x215A4 */ signed int base_x; // size 0x4
-    /* 0x215A8 */ signed int base_y; // size 0x4
-    /* 0x215AC */ signed int base_z; // size 0x4
+    u32 tex_head[12]; // size 0x30
+    u32 clut_head[12]; // size 0x30
+    u32 clut[8]; // size 0x20
+    u8 texbuf[131072]; // size 0x20000
+    u64 tex0; // size 0x4
+    s32 fonttype; // size 0x4
+    u32 rgb_u; // size 0x4
+    u32 rgb_d; // size 0x4
+    u32 rgb_s[4]; // size 0x10
+    u32 alpha; // size 0x4
+    u32 alpha_base; // size 0x4
+    u32 flag; // size 0x4
+    u16 x; // size 0x2
+    u16 y; // size 0x2
+    u16 wide_w; // size 0x2
+    u16 wide_h; // size 0x2
+    u16 right_x; // size 0x2
+    u16 right_y; // size 0x2
+    u16 wm; // size 0x2
+    u16 hm; // size s16 unk20C0;
+    s16 wait_count; // size 0x2
+    s16 wait_type; // size 0x2
+    s16 page_sound; // size 0x2
+    u16 code[400]; // size 0x320
+    s16 upper[400]; // size 0x320
+    s16 lower[400]; // size 0x320
+    s16 top; // size 0x2
+    s16 bottom; // size 0x2
+    s16 st_num; // size 0x2
+    s16 w_st_num; // size 0x2
+    s16 prl_count; // size 0x2
+    s16 preload; // size 0x2
+    s16 shadow_max; // size 0x2
+    s16 shadow_now; // size 0x2
+    u16 sel_xl; // size 0x2
+    u16 sel_xr; // size 0x2
+    u16 sel_yu[4]; // size 0x8
+    u16 sel_yd[4]; // size 0x8
+    s16 sel_max; // size 0x2
+    s16 sel_now; // size 0x2
+    u16 mes_v[10][64]; // size 0xu16 * unk20F50;
+    u16 * mes_str_now; // size 0x4
+    u16 * mes_str; // size 0x4
+    u16 * prl_str; // size 0x4
+    struct FONT_STREAM_DATA * stream; // size 0x4
+    struct WFONT_STREAM_DATA * w_stream; // size 0x4
+    struct MFONT_STREAM_DATA * m_stream; // size 0x4
+    u16 stream_max; // size 0x2
+    u16 w_stream_max; // size 0x2
+    u16 m_stream_max; // size 0x2
+    u16 m_code[256]; // size 0x200
+    s16 m_upper[256]; // size 0x200
+    s16 m_lower[256]; // size 0x200
+    s16 m_top; // size 0x2
+    s16 m_bottom; // size 0x2
+    s16 m_st_num; // size 0x2
+    s32 m_base_x; // size 0x4
+    s32 m_base_y; // size 0x4
+    s32 m_base_z; // size 0x4
+    u32 m_rgba; // size 0x4
+    s32 m_sx; // size 0x4
+    s32 m_sy; // size 0x4
+    s32 m_w; // size 0x4
+    s32 m_h; // size 0x4
+    s32 m_x; // size 0x4
+    s32 m_y; // size 0x4
+    f32 bar_blink; // size 0x4
+    u64 * pCur; // size 0x4
+    s32 base_x; // size 0x4
+    s32 base_y; // size 0x4
+    s32 base_z; // size 0x4
 };
 
 
 typedef struct WFONT_STREAM_DATA {
     // total size: 0x18
-    /* 0x00 */ unsigned short x; // size 0x2
-    /* 0x02 */ unsigned short y; // size 0x2
-    /* 0x04 */ unsigned short vw; // size 0x2
-    /* 0x06 */ unsigned short vh; // size 0x2
-    /* 0x08 */ unsigned short u; // size 0x2
-    /* 0x0A */ unsigned short v; // size 0x2
-    /* 0x0C */ unsigned int rgb_u; // size 0x4
-    /* 0x10 */ unsigned int rgb_d; // size 0x4
-    /* 0x14 */ unsigned short w; // size 0x2
-    /* 0x16 */ unsigned short h; // size 0x2
+    /* 0x00 */ u16 x; // size 0x2
+    /* 0x02 */ u16 y; // size 0x2
+    /* 0x04 */ u16 vw; // size 0x2
+    /* 0x06 */ u16 vh; // size 0x2
+    /* 0x08 */ u16 u; // size 0x2
+    /* 0x0A */ u16 v; // size 0x2
+    /* 0x0C */ u32 rgb_u; // size 0x4
+    /* 0x10 */ u32 rgb_d; // size 0x4
+    /* 0x14 */ u16 w; // size 0x2
+    /* 0x16 */ u16 h; // size 0x2
 } WFONT_STREAM_DATA;
 
 typedef struct MFONT_STREAM_DATA {
     // total size: 0x8
-    /* 0x0 */ unsigned short x; // size 0x2
-    /* 0x2 */ unsigned short y; // size 0x2
-    /* 0x4 */ unsigned short u; // size 0x2
-    /* 0x6 */ unsigned short v; // size 0x2
+    /* 0x0 */ u16 x; // size 0x2
+    /* 0x2 */ u16 y; // size 0x2
+    /* 0x4 */ u16 u; // size 0x2
+    /* 0x6 */ u16 v; // size 0x2
 } MFONT_STREAM_DATA;
 
 typedef struct FONT_STREAM_DATA
 {
-	unsigned short x;
-	unsigned short y;
-	unsigned short w;
-	unsigned short h;
-	unsigned short u;
-	unsigned short v;
-	unsigned int rgb_u;
-	unsigned int rgb_d;
+	u16 x;
+	u16 y;
+	u16 w;
+	u16 h;
+	u16 u;
+	u16 v;
+	u32 rgb_u;
+	u32 rgb_d;
 } FONT_STREAM_DATA;
 
 
 typedef struct Pad_KeyConfig {
     // total size: 0x60
-    signed int enter; // offset 0x0, size 0x4
-    signed int cancel; // offset 0x4, size 0x4
-    signed int skip; // offset 0x8, size 0x4
-    signed int front_move; // offset 0xC, size 0x4
-    signed int back_move; // offset 0x10, size 0x4
-    signed int right_turn; // offset 0x14, size 0x4
-    signed int left_turn; // offset 0x18, size 0x4
-    signed int right_move; // offset 0x1C, size 0x4
-    signed int left_move; // offset 0x20, size 0x4
-    signed int action; // offset 0x24, size 0x4
-    signed int attack; // offset 0x28, size 0x4
-    signed int dash; // offset 0x2C, size 0x4
-    signed int light; // offset 0x30, size 0x4
-    signed int item; // offset 0x34, size 0x4
-    signed int search_view; // offset 0x38, size 0x4
-    signed int ready; // offset 0x3C, size 0x4
-    signed int pause; // offset 0x40, size 0x4
-    signed int map; // offset 0x44, size 0x4
-    signed int padding[6]; // offset 0x48, size 0x18
+    s32 enter; // offset 0x0, size 0x4
+    s32 cancel; // offset 0x4, size 0x4
+    s32 skip; // offset 0x8, size 0x4
+    s32 front_move; // offset 0xC, size 0x4
+    s32 back_move; // offset 0x10, size 0x4
+    s32 right_turn; // offset 0x14, size 0x4
+    s32 left_turn; // offset 0x18, size 0x4
+    s32 right_move; // offset 0x1C, size 0x4
+    s32 left_move; // offset 0x20, size 0x4
+    s32 action; // offset 0x24, size 0x4
+    s32 attack; // offset 0x28, size 0x4
+    s32 dash; // offset 0x2C, size 0x4
+    s32 light; // offset 0x30, size 0x4
+    s32 item; // offset 0x34, size 0x4
+    s32 search_view; // offset 0x38, size 0x4
+    s32 ready; // offset 0x3C, size 0x4
+    s32 pause; // offset 0x40, size 0x4
+    s32 map; // offset 0x44, size 0x4
+    s32 padding[6]; // offset 0x48, size 0x18
 } Pad_KeyConfig;
 
 struct Pad_KeyConfig key_config; // size: 0x60, address: 0x116DB10
 struct FONT_DATA font;
 short D_003585A8[20][2];
 short D_003585AA[20][2];
-unsigned long D_003585C0[34];
+u64 D_003585C0[34];
 char font_stream_buf[FONT_STREAM_BUFFER_SIZE];
 char D_01D08FB0[FONT_STREAM_BUFFER_SIZE];
 
-
-void fontSet(unsigned short code, unsigned short x, unsigned short y)
+void fontSet(u16 code, u16 x, u16 y)
 {
 	int num;
 
@@ -419,7 +416,7 @@ s32 fontGetStatus() {
 }
 
 // TODO: fix sh3 equivalent
-// void fontCopyMessage(unsigned short* pto, unsigned short* pfrom) {
+// void fontCopyMessage(u16* pto, u16* pfrom) {
 //     u16 n;
 //     do {
 //         n = *pfrom++;
